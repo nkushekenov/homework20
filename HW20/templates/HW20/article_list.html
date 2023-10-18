@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Articles</title>
+</head>
+<body>
+    <h1>Article List</h1>
+    <ul>
+    {% for article in object_list %}
+        <li>
+            <a href="{% url 'article-detail' article.pk %}">{{ article.title }}</a> - {{ article.created_at }}
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
